@@ -1,0 +1,64 @@
+<div layout="column" layout-fill ng-cloak>
+	<md-toolbar layout="row" md-scroll-shrink>
+		<div class="md-toolbar-tools">
+			<span flex></span>
+
+			<h1 flex style="text-align:center;">Leia Mais</h1 >
+
+			<span flex></span>
+
+			<a ng-href="#/"><md-button class="md-icon-button">
+				<md-icon>exit_to_app</md-icon>
+			</md-button></a>
+		</div>
+	</md-toolbar>
+
+	<md-content>
+		<md-tabs md-border-bottom>
+			<md-tab id="you">
+				<md-tab-label>
+					<md-icon>person</md-icon> Você
+				</md-tab-label>
+				<md-tab-body>
+					<ng-include src="'app/you/you.html'" ng-controller="YouController as vm"></ng-include>
+				</md-tab-body>
+			</md-tab>
+
+			<md-tab id="feed">
+				<md-tab-label>
+					<md-icon>list</md-icon> Atividades
+				</md-tab-label>
+				<md-tab-body>
+					<ng-include src="'app/feed/feed.html'"></ng-include>
+				</md-tab-body>
+			</md-tab>
+
+			<md-tab id="score">
+				<md-tab-label>
+					<md-icon>person_add</md-icon> Amigos
+				</md-tab-label>
+				<md-tab-body>
+					<ng-include src="'app/friends/friends.html'"></ng-include>
+				</md-tab-body>
+			</md-tab>
+
+			<md-tab id="score">
+				<md-tab-label>
+					<md-icon>attach_money</md-icon> Pontos
+				</md-tab-label>
+				<md-tab-body>
+					<ng-include src="'app/score/score.html'"></ng-include>
+				</md-tab-body>
+			</md-tab>
+
+			<md-tab id="score">
+				<md-tab-label>
+					<md-icon>settings</md-icon> Configurações
+				</md-tab-label>
+				<md-tab-body>
+					<ng-include src="'app/settings/settings.html'"></ng-include>
+				</md-tab-body>
+			</md-tab>
+		</md-tabs>
+	</md-content>
+</div>

@@ -1,0 +1,34 @@
+<div layout="row" layout-padding class="body" ng-controller="FriendsController as vm">
+	<div flex="60" offset="20" layout="column" class="md-whiteframe-z1" style="background-color: #fff;">
+		<md-autocomplete
+          md-selected-item="vm.selectedItem"
+          md-search-text="vm.searchText"
+          md-search-text-change="vm.null()"
+          md-selected-item-change="vm.null(item)"
+          md-items="item in vm.people"
+          md-item-text="item.name"
+          md-min-length="0"
+          placeholder="Pesquisa o nome de um amigo"
+          md-menu-class="autocomplete-custom-template">
+	        <md-item-template>
+	        	<div layout="row" layout-padding>
+	        		<img src="{{ item.avatar }}" width="30" height="30" style="border-radius: 50%;" alt="Avatar">
+	        		{{item.name}}
+	        	</div>
+	        </md-item-template>
+      	</md-autocomplete>
+
+      	<br><br>
+
+		<div ng-if="vm.selectedItem">
+			<img src="{{vm.selectedItem.avatar}}" width="80" height="80" alt="">
+			<h3>{{ vm.selectedItem.name }}</h3>
+			<div layout="row">
+	            <md-button class="md-raised md-primary" ng-click="vm.salvar()" ng-disabled="vm.loading">Adicionar</md-button>
+				<md-progress-circular md-mode="indeterminate" ng-if="vm.loading"></md-progress-circular>
+	            <md-icon style="color: green;" ng-if="vm.confirmed">check</md-icon>
+	            <span flex></span>
+			</div>
+		</div>
+	</div>
+</div>
