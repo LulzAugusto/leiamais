@@ -1,0 +1,19 @@
+{
+  "name": "leiamais",
+  "version": "0.0.0",
+  "homepage": "https://github.com/LulzAugusto/leiamais",
+  "authors": [
+    "Luiz Augusto Crisostomo <luiz66@gmail.com>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
